@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Social Media</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Minimal Social Media</h1>
+
+  <div id="auth-section">
+    <h2>Login / Register</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <input type="text" id="userName" placeholder="User Name" />
+    <input type="text" id="phone" placeholder="Phone" />
+    <button onclick="register()">Sign Up</button>
+    <button onclick="login()">Log In</button>
+  </div>
+
+  <div id="post-section" style="display: none;">
+    <h2>Create a Post</h2>
+    <input type="text" id="title" placeholder="Post Title" />
+    <textarea id="content" placeholder="Post Content"></textarea>
+    <button onclick="createPost()">Post</button>
+
+    <h2>All Posts</h2>
+    <button onclick="fetchPosts()">Refresh Posts</button>
+    <ul id="posts"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

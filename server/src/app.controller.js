@@ -7,7 +7,7 @@ import { globalError, notFound } from "./utils/index.js";
 const bootstrap = async (app, express, cors) => {
     // allow frontend to communicate
     app.use(cors({
-        origin: "http://127.0.0.1:5500",
+        origin: "*",
         allowedHeaders: ["Content-Type", "Authorization"]
     }));
     // parse JSON data

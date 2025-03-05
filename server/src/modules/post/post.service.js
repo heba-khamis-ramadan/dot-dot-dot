@@ -39,8 +39,10 @@ export const get_posts = async (req, res, next) => {
     // get user data from req
     const userExistance = req.authUser;
     const userId = userExistance.id;
-    const page = req.query.page;
-    const limit = req.query.limit;
+    let page = req.query.page;
+    let limit = req.query.limit;
+    if(!limit || limit < 0) limit = 10;
+    if(!page || page < 0) page = 1;
     const skip = (page - 1) * limit;
     const result = await Post.find({userId}).limit(limit).skip(skip).sort({"createdAt":-1});
     // send response

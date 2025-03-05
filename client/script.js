@@ -1,3 +1,5 @@
+const API_URL = "http://localhost:3000";
+
 // User Authentication
 async function register() {
   const email = document.getElementById('email').value;
@@ -6,7 +8,7 @@ async function register() {
   const phone = document.getElementById('phone').value;
 
   try {
-    const response = await fetch(`${process.env.API_URL}/auth/signup`, {
+    const response = await fetch(`${API_URL}/auth/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password, userName, phone })
@@ -22,7 +24,7 @@ async function login() {
   const password = document.getElementById('password').value;
 
   try {
-    const response = await fetch(`${process.env.API_URL}/auth/login`, {
+    const response = await fetch(`${API_URL}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password })
@@ -50,7 +52,7 @@ async function createPost() {
   const token = localStorage.getItem('token');
 
   try {
-    const response = await fetch(`${process.env.API_URL}/posts`, {
+    const response = await fetch(`${API_URL}/posts`, {
       method: "POST",
       headers: { "Content-Type": "application/json", 
                 "Authorization": `access ${token}` },
@@ -72,7 +74,7 @@ async function createPost() {
 
 async function fetchPosts() {
   const token2 = localStorage.getItem('token');
-  const response2 = await fetch(`${process.env.API_URL}/posts`, {
+  const response2 = await fetch(`${API_URL}/posts`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

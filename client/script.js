@@ -13,7 +13,7 @@ async function register() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password, userName, phone })
     });
-    alert(response.message);
+    alert("Now, log in with the email and password only please :)");
   } catch (error) {
     alert(error.message);
   }

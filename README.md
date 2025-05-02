@@ -1,4 +1,5 @@
-# 📝Dot Dot Dot
+# ✒ dot dot dot
+![Dot Dot Dot](https://res.cloudinary.com/dncl2sqt9/image/upload/v1746181635/Projects_Cover_psbiou.png)
 
 A simple, clutter-free, text-based social media platform — focused on posts and user interactions, built with Express.js, MongoDB, and a vanilla HTML, CSS, and JavaScript frontend.
 
